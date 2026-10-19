@@ -363,7 +363,7 @@ a.contact-row:hover .big { background-size: 100% 2px; }
 
 .quote { margin: 0 0 12px; padding: 24px; border-radius: var(--r-md); background: var(--surface); font-size: 17px; }
 .quote .k { font: 500 0.74em/1 var(--f-mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
-.quote:last-of-type { margin-bottom: 28px; }
+.quote + :not(.quote) { margin-top: 32px; }
 /* Цитата с подписью */
 .voice { margin: 56px 0 0; }
 .voice blockquote { margin: 0; font: 600 clamp(26px, 2.8vw, 36px)/1.12 var(--f-display); letter-spacing: -0.03em; text-wrap: balance; }
@@ -371,6 +371,7 @@ a.contact-row:hover .big { background-size: 100% 2px; }
 
 /* Пары «на тесте → что изменили» */
 .pairs { margin: 32px 0 0; }
+.pairs + p { margin-top: 32px; }
 .pairs-row { display: grid; grid-template-columns: 280px 24px minmax(0, 1fr); gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); }
 .pairs-row .was { color: var(--muted); }
 .pairs-row .now { font: 600 23px/1.25 var(--f-display); letter-spacing: -0.02em; text-wrap: balance; }
