@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Рекламный кабинет: загрузка материалов без почты · Александр Стародумов</title>
+  <meta name="description" content="Кейс: загрузка рекламных материалов в кабинете розничной сети. Ролики и документы загружаются и проходят проверку в кабинете, без пересылки по почте.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Рекламный кабинет: загрузка материалов без почты">
+  <meta property="og:description" content="Кейс продуктового дизайнера: менеджеры агентств сами загружают ролики и документы и запускают кампании в кабинете.">
+  <meta property="og:image" content="https://astarodumov.github.io/assets/img/ads/upload-kso.webp">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body id="top" class="case-page">
+  <header class="site-header" data-header>
+    <div class="wrap header-in">
+      <a class="brand" href="../index.html"><span class="brand-mark">АС</span><span class="brand-name">Александр Стародумов</span></a>
+      <span class="header-section mono" data-current-section aria-hidden="true"></span>
+      <nav class="nav">
+        <a href="../index.html#work">Кейсы</a>
+        <a href="../index.html#approach">Подход</a>
+        <a class="btn btn-ink btn-sm" href="#contacts">Связаться</a>
+      </nav>
+    </div>
+    <div class="progress" data-progress></div>
+  </header>
+
+  <main>
+    <section class="case-hero case-hero--ads">
+      <div class="wrap">
+        <a class="back mono" href="../index.html#work"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Все кейсы</a>
+        <div class="case-tags mono"><span>Рекламный кабинет</span><span>Instore-реклама</span><span>B2B</span><span>2025</span></div>
+        <h1 class="case-title">Рекламный кабинет: загрузка материалов без почты</h1>
+        <p class="case-lead">Вторая часть кейса о рекламном кабинете. <a href="ads.html">Расчёт кампании</a> уже переехал в кабинет, а рекламные материалы по-прежнему пересылали по почте через цепочку менеджеров. Я спроектировал загрузку роликов и документов прямо в кабинете, чтобы менеджеры агентств запускали кампании сами.</p>
+        <figure class="case-cover">
+          <img fetchpriority="high" src="../assets/img/ads/upload-kso.webp" alt="Загрузка роликов для касс самообслуживания: три файла и кнопка отправки на проверку" width="1800" height="1019">
+          <figcaption>Загрузка роликов для касс самообслуживания. Бренды и цифры на макетах условные</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="summary wrap">
+      <div class="result">
+        <p class="eyebrow mono">Результат</p>
+        <div class="result-metrics">
+          <div class="metric"><div class="metric-line"><span class="to">−80%</span></div><span class="metric-label mono">ручных операций у аккаунт-менеджеров после запуска кабинета</span></div>
+          <div class="metric"><div class="metric-line"><span class="from">Отказ на модерации</span><svg class="i" viewBox="0 0 24 24" aria-label="стало"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">требования до загрузки</span></div><span class="metric-label mono">технические и юридические требования видны до отправки</span></div>
+        </div>
+        <p class="result-note">Функциональность в проде. Процесс запуска кампании теперь полностью в кабинете: менеджеры агентств загружают материалы и отправляют их на проверку сами, без пересылки через аккаунт-менеджеров.</p>
+      </div>
+      <dl class="meta mono-dt">
+            <div><dt>Роль</dt><dd>Продуктовый дизайнер</dd></div>
+            <div><dt>Сроки</dt><dd>3 недели, включая исследование, тест прототипа и финальные макеты, 2025</dd></div>
+            <div><dt>Статус</dt><dd>В проде</dd></div>
+            <div><dt>Команда</dt><dd>Продакт-менеджер, аналитики, разработчики, тестировщики</dd></div>
+            <div><dt>Что делал</dt><dd>Интервью, job stories, user flow, прототип и тест, финальные макеты, больше 15 сценариев</dd></div>
+          </dl>
+    </section>
+
+    <article class="case-body wrap">
+      <div class="prose">
+
+        <h2 id="s1" class="reveal">Последний шаг запуска оставался на почте</h2>
+        <p>Почти весь запуск кампании уже был в кабинете, кроме загрузки рекламных материалов. Менеджеры агентств отправляли файлы аккаунт-менеджерам, а те передавали их дальше менеджерам по размещению и юристам. Цель: сделать запуск кампании полностью цифровым и убрать лишние звенья.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/process-before.webp" alt="Схема процесса до: ручные шаги аккаунт-менеджера, клиента, менеджера по размещению и юриста" width="2400" height="546" loading="lazy"></div>
+          <figcaption>Процесс «до» с ручными шагами аккаунт-менеджера, клиента, менеджера по размещению и юриста</figcaption>
+        </figure>
+
+        <h3>Что выяснили</h3>
+        <p>Я поговорил с аккаунт-менеджерами, менеджерами по размещению и менеджерами агентств и собрал их потребности в job stories. Главные из них:</p>
+        <div class="quote"><span class="k">Когда</span> я подтверждаю расчёт кампании, <span class="k">я хочу</span> получить напоминание о сроках и требованиях к роликам, <span class="k">чтобы</span> успеть отправить их на согласование.</div>
+        <div class="quote"><span class="k">Когда</span> я загружаю рекламный файл, <span class="k">я хочу</span> сразу видеть технические и юридические требования, <span class="k">чтобы</span> его не отклонили на модерации.</div>
+        <div class="quote"><span class="k">Когда</span> в кампании несколько роликов, <span class="k">я хочу</span> задать период и порядок их показа, <span class="k">чтобы</span> ролики шли в нужной последовательности.</div>
+        <div class="quote"><span class="k">Когда</span> ролику нужны дополнительные документы, <span class="k">я хочу</span> прикрепить их вместе с роликом, <span class="k">чтобы</span> ускорить согласование.</div>
+        <div class="quote"><span class="k">Когда</span> я отправил материалы на проверку, <span class="k">я хочу</span> видеть статус и сроки проверки, <span class="k">чтобы</span> понимать, на каком этапе согласование.</div>
+        <p>Ограничения, которые задали рамки решения: у разных форматов и сетей разные требования к файлам (хронометраж, ориентация, разрешение), на один формат может быть до 6 файлов, длина ролика должна совпадать с выбранной при расчёте, а правила акции и договор загружаются в том же процессе.</p>
+
+        <h2 id="s2" class="reveal">Материалы сгруппированы так, как их размещают</h2>
+        <ul>
+          <li><b>Загрузка начинается сама</b> сразу после подтверждения расчёта, напоминание о сроке висит сверху: материалы нужны не позднее чем за 7 дней до старта.</li>
+          <li><b>Отдельный блок на каждый формат</b> с требованиями к файлам и загрузкой перетаскиванием: требования видны до загрузки, а не после отказа на модерации.</li>
+          <li><b>Общий период показа в заголовке блока</b> и переключатель «Задать разные периоды» для тех, кому нужно показывать ролики по очереди.</li>
+          <li><b>Документы в том же интерфейсе,</b> без отдельного письма юристу.</li>
+          <li><b>Статусы на каждом шаге:</b> отправлено на проверку, согласовано, ждёт старта, кампания запущена.</li>
+        </ul>
+
+        <h2 id="s3" class="reveal">Тест прототипа поменял формулировки и блоки</h2>
+        <p>Я проверил интерактивный прототип с пятью участниками на пяти гипотезах. Вот что подтвердилось и что мы поменяли:</p>
+        <div class="pairs">
+          <div class="pairs-row pairs-head" aria-hidden="true"><span>На тесте</span><span></span><span>Что изменили</span></div>
+          <div class="pairs-row"><span class="was">Слово «Очередь» для режима показа оказалось непонятным</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Переключатель «Задать разные периоды» с подсказкой</span></div>
+          <div class="pairs-row"><span class="was">Без полного имени файл трудно узнать</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Показываем полное имя файла</span></div>
+          <div class="pairs-row"><span class="was">Даты показа неочевидны</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Общий период вынесли в заголовок блока</span></div>
+          <div class="pairs-row"><span class="was">Много форматов перегружают экран</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Блоки визуально упростили</span></div>
+          <div class="pairs-row"><span class="was">Казалось, что параметры файла (разрешение, вес) при загрузке не нужны</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Параметры оставили: по ним участники сверяли длину и размер файла</span></div>
+        </div>
+        <p>Больше всего вопросов было к режиму показа. Один участник сразу понял, что такое «Ротация», а «Очередь» понял только после того, как переключился на неё и заданные периоды сбросились. Поэтому вместо выбора режима появился переключатель «Задать разные периоды».</p>
+        <figure class="voice">
+          <blockquote>«Календарь — лишний шаг. Как очередь можно выбирать в днях?»</blockquote>
+          <figcaption>Участник теста прототипа</figcaption>
+        </figure>
+
+        <h2 id="s4" class="reveal">Материалы проходят путь внутри кабинета</h2>
+        <p>Кабинет ведёт кампанию от загрузки до старта: показывает, какие ролики загружены и какие уже согласованы, и сам запускает кампанию в запланированную дату.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/upload-kso.webp" alt="Загрузка роликов для касс самообслуживания: три файла и кнопка отправки на проверку" width="1800" height="1019" loading="lazy"></div>
+          <figcaption>Ролики для касс самообслуживания загружены</figcaption>
+        </figure>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/upload-partial.webp" alt="Ролики для касс согласованы, для радио ещё не загружены, предупреждение сверху" width="1800" height="659" loading="lazy"></div>
+          <figcaption>Ролики для касс согласованы, для радио ещё нет: кабинет предупреждает, что кампания начнётся в запланированную дату</figcaption>
+        </figure>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/upload-live.webp" alt="Кампания активна: согласованные ролики с периодами показа" width="1800" height="689" loading="lazy"></div>
+          <figcaption>Кампания запущена автоматически в запланированную дату</figcaption>
+        </figure>
+
+        <h2 id="s5" class="reveal">Кабинет ловит ошибки, которые стоят денег и сроков</h2>
+        <p>Всего в этой задаче я проработал больше 15 сценариев, включая пустые состояния и ошибки. Вот четыре из них, где ошибка клиента стоила бы денег или сдвинула старт кампании.</p>
+
+        <h3>1. Длина ролика не совпадает с расчётом</h3>
+        <p>Стоимость кампании зависит от длины ролика, выбранной в расчёте. Если загруженный ролик длиннее, отправить его нельзя: нужно заменить ролик или изменить расчёт. Если короче, кабинет объясняет, что длина влияет на стоимость, и предлагает не переплачивать: загрузить ролик нужной длины или изменить расчёт. В окне есть шаги, как вернуться к расчёту, и предупреждение, что загруженные материалы при этом удалятся.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/edge-length.webp" alt="Окно с предупреждением: загруженный ролик короче длины, выбранной в расчёте" width="1800" height="844" loading="lazy"></div>
+          <figcaption>Ролик короче, чем в расчёте: кабинет объясняет, что длина влияет на стоимость</figcaption>
+        </figure>
+
+        <h3>2. Период с пропусками</h3>
+        <p>Если между периодами роликов остались свободные дни, кабинет предупреждает: в эти дни ролики не покажут, но оплата будет начислена. Пропуск можно убрать или поставить в него другой ролик.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/edge-gaps.webp" alt="Блок роликов с периодами показа и предупреждением о пропущенных днях" width="1800" height="802" loading="lazy"></div>
+          <figcaption>Между периодами роликов пропущены дни: показа не будет, а оплата спишется</figcaption>
+        </figure>
+
+        <h3>3. Отправка без периодов</h3>
+        <p>Материалы можно отправить на проверку, даже если периоды показа ещё не решены. Ролик без периода помечается предупреждением, а в списке кампаний у такой кампании появляется красный значок календаря. Перед стартом пустой период уже ошибка: в статусе «Ожидает старта» периоды должны быть заданы у всех роликов.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/edge-no-period.webp" alt="Ролик без заданного периода показа с предупреждением" width="1800" height="750" loading="lazy"></div>
+          <figcaption>Ролик без периода отмечен предупреждением</figcaption>
+        </figure>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/edge-list-icon.webp" alt="Строка в списке кампаний с красным значком календаря" width="1800" height="470" loading="lazy"></div>
+          <figcaption>В списке кампаний красный значок: периоды показа не заданы</figcaption>
+        </figure>
+
+        <h3>4. Правки после отправки на проверку</h3>
+        <p>Материалы можно менять до старта кампании. Отклонённый ролик нельзя отправить повторно, только заменить. Проверенные ролики сохраняют статус, новые получают метку «На проверке». Пока клиент редактирует, трафик-менеджер видит уведомление, и согласовать ролики в это время нельзя. После старта кампании редактировать материалы в первой версии нельзя.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/edge-rejected.webp" alt="Отклонённый ролик с требованием заменить его перед отправкой изменений" width="1800" height="1069" loading="lazy"></div>
+          <figcaption>Отклонённый ролик нужно заменить, прежде чем отправлять изменения</figcaption>
+        </figure>
+
+        <p><b>Вместе с расчётом кабинет закрыл весь путь до запуска.</b> Расчёт кампании, загрузка материалов и согласование теперь в одном месте, и менеджеры агентств запускают кампании без посредников.</p>
+
+        </div>
+    </article>
+
+    <a class="next-case next--fuel" href="fuel.html">
+      <div class="wrap next-in">
+        <div>
+          <span class="mono">Следующий кейс</span>
+          <span class="next-title">Подбор выгодных АЗС в рейсе</span>
+        </div>
+        <span class="cta-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </main>
+
+  <section class="contact" id="contacts">
+    <div class="wrap">
+      <h2 class="sr-only">Контакты</h2>
+      <div class="contact-list">
+        <a class="contact-row" href="https://t.me/sstarodumov"><span class="mono">Telegram</span><span class="big">@sstarodumov</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="contact-row"><span class="mono">Почта</span><a class="big" id="email" href="mailto:s.starodumov@gmail.com">s.starodumov<wbr>@gmail.com</a><button class="copy" type="button" data-copy="s.starodumov@gmail.com" aria-controls="email">Скопировать</button></div>
+        <a class="contact-row" href="https://www.linkedin.com/in/astarodumov/"><span class="mono">LinkedIn</span><span class="big">astarodumov</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="contact-row" href="https://disk.yandex.ru/i/7SIRNfnMH6PnsQ"><span class="mono">Резюме</span><span class="big">Скачать резюме · PDF</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+    <footer class="footer wrap mono">
+      <span>© 2026 Александр Стародумов</span>
+      <a href="#top">Наверх <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </footer>
+  </section>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Подбор выгодных АЗС в рейсе · Александр Стародумов</title>
+  <meta name="description" content="Кейс: подбор АЗС и оплата топлива в мобильном приложении для водителей доставки, включая работу без интернета.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Подбор выгодных АЗС в рейсе">
+  <meta property="og:description" content="Кейс продуктового дизайнера: MVP подбора АЗС в приложении для водителей доставки.">
+  <meta property="og:image" content="https://astarodumov.github.io/assets/img/fuel/cover.webp">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body id="top" class="case-page">
+  <header class="site-header" data-header>
+    <div class="wrap header-in">
+      <a class="brand" href="../index.html"><span class="brand-mark">АС</span><span class="brand-name">Александр Стародумов</span></a>
+      <span class="header-section mono" data-current-section aria-hidden="true"></span>
+      <nav class="nav">
+        <a href="../index.html#work">Кейсы</a>
+        <a href="../index.html#approach">Подход</a>
+        <a class="btn btn-ink btn-sm" href="#contacts">Связаться</a>
+      </nav>
+    </div>
+    <div class="progress" data-progress></div>
+  </header>
+
+  <main>
+    <section class="case-hero case-hero--fuel">
+      <div class="wrap">
+        <a class="back mono" href="../index.html#work"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Все кейсы</a>
+        <div class="case-tags mono"><span>Мобильное приложение</span><span>Водители доставки</span><span>MVP</span><span>2024</span></div>
+        <h1 class="case-title">Подбор выгодных АЗС в рейсе</h1>
+        <p class="case-lead">Компания хотела экономить на топливе, подбирая водителям АЗС с выгодной ценой по маршруту. Сам водитель выгодную АЗС искать не станет, а интернета на заправке может не быть. Я спроектировал подбор, добавление АЗС в маршрут и оплату так, чтобы этот шаг нельзя было пропустить и чтобы водитель мог заплатить, даже если пропала связь.</p>
+        <figure class="case-cover flat">
+          <img fetchpriority="high" src="../assets/img/fuel/cover.webp" alt="Экраны приложения для водителей: топливные карты, рекомендованные АЗС и путевые листы" width="1800" height="1022">
+          <figcaption>Мобильное приложение для водителей</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="summary wrap">
+      <div class="result">
+        <p class="eyebrow mono">Результат</p>
+        <div class="result-metrics">
+          <div class="metric"><div class="metric-line"><span class="from">Нет связи</span><svg class="i" viewBox="0 0 24 24" aria-label="стало"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">номер карты на экране</span></div><span class="metric-label mono">водитель заплатит, даже если пропала связь или не загрузился код</span></div>
+          <div class="metric"><div class="metric-line"><span class="from">Отказ от АЗС</span><svg class="i" viewBox="0 0 24 24" aria-label="стало"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">уточнение для алгоритма</span></div><span class="metric-label mono">каждый отказ объясняет, что улучшить в подборе</span></div>
+        </div>
+        <p class="result-note">Функциональность в проде. Обе версии MVP проверены с водителями на интерактивных прототипах, в тестировании участвовали 6 водителей.</p>
+      </div>
+      <dl class="meta mono-dt">
+            <div><dt>Роль</dt><dd>Продуктовый дизайнер</dd></div>
+            <div><dt>Сроки</dt><dd>4 недели, включая дизайн, обсуждения и согласования с ПМ и аналитиком, 2024</dd></div>
+            <div><dt>Статус</dt><dd>Реализовано, в проде</dd></div>
+            <div><dt>Команда</dt><dd>Менеджер продукта, аналитик, разработчики</dd></div>
+            <div><dt>Что делал</dt><dd>Требования с бизнесом и разработкой, job stories и сценарии, прототипы и тесты с водителями, проектирование интерфейса</dd></div>
+          </dl>
+    </section>
+
+    <article class="case-body wrap">
+      <div class="prose">
+
+        <h2 id="s1" class="reveal">Водитель не станет подбирать заправку сам</h2>
+        <p>Приложение для водителей доставки помогает пройти рейс без бумажных документов, а компании — видеть выполнение рейсов в реальном времени. Одна из целей продукта — экономия на топливе: приложение подбирает АЗС с выгодной ценой по маршруту. Моя задача — спроектировать MVP подбора и добавления рекомендованных АЗС в маршрут.</p>
+        <p>Сложность была в трёх вещах:</p>
+        <ul>
+          <li><b>Мотивация.</b> Водители не мотивированы подбирать заправку через приложение. Значит, шаг нельзя дать пропустить, а при отказе нужно узнать причину.</li>
+          <li><b>Отказ от выбранной АЗС.</b> Если водитель выбрал заправку, но не заехал или не заправился, нужно понять почему: большая очередь, нет подъезда для грузовика. Без этого алгоритм подбора не улучшить.</li>
+          <li><b>Оплата без гарантий.</b> Заправляются по виртуальной топливной карте, по сути QR-коду. Нужно было решить, как заправиться, если пропал интернет, код не загрузился или не определилась геопозиция.</li>
+        </ul>
+
+        <h2 id="s2" class="reveal">Сначала договорились, что вообще возможно</h2>
+        <p>Многое в сценарии зависело от того, что умеют топливные компании и наша инфраструктура. Поэтому я начал с требований вместе с бизнесом, менеджером продукта, аналитиками и разработчиками: что делать без интернета, как быть, если водитель сделает скриншот QR-кода и заправит личную машину, и так далее.</p>
+        <p>Дальше я описал job stories, основной сценарий и альтернативные: каждую ситуацию, в которой водитель уходит с основного пути.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Ситуация</th><th>Что делает приложение</th></tr></thead>
+            <tbody>
+              <tr><td>АЗС по маршруту не нашлись</td><td>Показывает доступные топливные карты, водитель находит заправку сам и платит картой</td></tr>
+              <tr><td>Водитель приехал на АЗС, не нажав «Заехать»</td><td>Определяет заправку по геопозиции и предлагает оплату</td></tr>
+              <tr><td>Код для оплаты не считывается</td><td>Даёт запросить код повторно и показывает номер топливной карты для кассира</td></tr>
+              <tr><td>Код для оплаты не загрузился</td><td>Предлагает получить код по СМС</td></tr>
+              <tr><td>Водитель случайно ответил, что заправился</td><td>Пока водитель на АЗС, предлагает вернуться к оплате</td></tr>
+              <tr><td>Приложение закрылось или упало</td><td>Открывается на последнем экране, если прошло немного времени, иначе на экране рейса</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="s3" class="reveal">Ключевые решения</h2>
+
+        <h3>1. Приложение само спрашивает про заправку</h3>
+        <p>Водитель не будет искать подбор АЗС в меню. Поэтому вопрос «Вам потребуется заправка в рейсе?» появляется при выезде из распределительного центра, когда водитель и так смотрит в приложение. Дальше он видит подобранные АЗС, может посмотреть подъезд на карте и одной кнопкой «Заехать» добавить заправку в маршрут.</p>
+        <figure class="wide reveal">
+          <div class="canvas flat"><img src="../assets/img/fuel/ask.webp" alt="Экран выезда из распределительного центра и вопрос, потребуется ли заправка" width="1800" height="1442" loading="lazy"></div>
+          <figcaption>Вопрос о заправке при выезде из распределительного центра</figcaption>
+        </figure>
+        <figure class="wide reveal">
+          <div class="canvas flat"><img src="../assets/img/fuel/pick.webp" alt="Список рекомендованных АЗС и добавление выбранной в маршрут" width="1800" height="966" loading="lazy"></div>
+          <figcaption>Выбор из подобранных АЗС: «На карте» или «Заехать». После выбора кнопка подбора становится зелёной, а приложение сообщает, что АЗС добавлена в маршрут</figcaption>
+        </figure>
+
+        <h3>2. Отказ от АЗС только с причиной</h3>
+        <p>Если водитель отменяет выбранную заправку, он выбирает причину из списка. Список собран из реальных ситуаций в рейсе: большая очередь, нет подъезда для грузового транспорта, АЗС на другой стороне дороги, карту не принимают, не работает QR-код. Это одна короткая форма для водителя и данные, без которых алгоритм подбора не улучшить. На тесте водители подтвердили, что причин в списке хватает. А ситуации из их рассказов в нём уже есть.</p>
+        <figure class="wide reveal">
+          <div class="canvas flat"><img src="../assets/img/fuel/refuse.webp" alt="Экран «Почему не заправились?» со списком причин и подтверждением отправки" width="1800" height="920" loading="lazy"></div>
+          <figcaption>Причина отказа и благодарность за ответ</figcaption>
+        </figure>
+
+        <h3>3. Оплата без лишних действий</h3>
+        <p>Если приложение определило, что водитель на выбранной АЗС, код для оплаты открывается сам. Если геопозиция не определилась, код открывается кнопкой «К оплате». QR-код генерирует топливная компания, он обновляется каждые 5 минут. После оплаты приложение спрашивает, прошла ли заправка успешно.</p>
+        <figure class="wide reveal">
+          <div class="canvas flat"><img src="../assets/img/fuel/pay.webp" alt="Приезд на АЗС, кнопка «К оплате», QR-код и вопрос об успешной заправке" width="1800" height="1532" loading="lazy"></div>
+          <figcaption>От приезда на АЗС до оплаты</figcaption>
+        </figure>
+
+        <h3>4. Реальные ограничения заправки в интерфейсе</h3>
+        <p>У тягача и прицепа разные квоты топлива, поэтому для машины с прицепом в окне оплаты появляется переключатель «Тягач / Прицеп». На некоторых АЗС есть лимит топлива на одну заправку, поэтому водитель может вернуться к оплате ещё раз или найти другие заправки дальше по маршруту.</p>
+        <figure class="voice">
+          <blockquote>«За один раз практически не получится нигде заправиться»</blockquote>
+          <figcaption>Водитель на тестировании</figcaption>
+        </figure>
+
+        <h3>5. Оплата, даже если пропала связь</h3>
+        <p>Если код не сгенерировался, пропал интернет или сотовая связь, приложение всё равно показывает номер топливной карты, который можно назвать кассиру, и предлагает подключиться к Wi-Fi на АЗС.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><div class="phones">
+            <img src="../assets/img/fuel/trailer.webp" alt="Оплата отдельно за тягач и прицеп" width="720" height="1600" loading="lazy">
+            <img src="../assets/img/fuel/repeat.webp" alt="Повторная оплата или поиск новых АЗС" width="720" height="1600" loading="lazy">
+            <img src="../assets/img/fuel/error.webp" alt="Ошибка получения кода: показан номер топливной карты" width="720" height="1600" loading="lazy">
+            <img src="../assets/img/fuel/offline.webp" alt="Нет интернета: подсказка подключиться к Wi-Fi и номер карты" width="720" height="1600" loading="lazy">
+          </div></div>
+          <figcaption>Тягач и прицеп отдельно, повторная заправка, ошибка кода и отсутствие интернета</figcaption>
+        </figure>
+
+        <h2 id="s4" class="reveal">Компромисс: первая версия без навигатора</h2>
+        <p>Встроенный навигатор в приложении ещё разрабатывался. Чтобы не ждать его, первую версию сделали с кнопкой «Открыть в навигаторе», которая предлагала выбрать навигационное приложение. Параллельно я проработал версию со встроенным навигатором и добавлением АЗС прямо в маршрут, её экраны в этом кейсе.</p>
+
+        <h2 id="s5" class="reveal">Что поменялось после теста с водителями</h2>
+        <p>Прототип мы проверили с 6 водителями: подбор, заезд на АЗС, оплату и ситуации, когда что-то идёт не так. Основной путь водители поняли. Главное выяснилось из их рассказов о том, как они заправляются на самом деле.</p>
+        <div class="pairs">
+          <div class="pairs-row pairs-head" aria-hidden="true"><span>На тесте</span><span></span><span>Что изменили</span></div>
+          <div class="pairs-row"><span class="was">За раз отпускают 150–⁠170 литров, водители платят в несколько подходов</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Код для оплаты можно открыть снова</span></div>
+          <div class="pairs-row"><span class="was">Код не всегда грузится, в 200–⁠300 км от Москвы может не быть связи</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Номер карты для кассира на экране оплаты</span></div>
+          <div class="pairs-row"><span class="was">Водители хотели рассмотреть подъезд к АЗС на карте</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Шторка сворачивается, когда водитель трогает карту</span></div>
+          <div class="pairs-row"><span class="was">Кнопку «К рейсу» приняли за отмену АЗС</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Её больше нет, для отмены есть кнопка «Отменить АЗС»</span></div>
+        </div>
+
+        <h2 id="s6" class="reveal">Выводы</h2>
+        <p><b>Немотивированного пользователя важно спросить в нужный момент.</b> Подбор АЗС работает, потому что приложение спрашивает о заправке при выезде из распределительного центра, а не ждёт, что водитель сам начнёт её искать.</p>
+        <p><b>Пограничные случаи важнее основного сценария.</b> Самые сложные решения в кейсе касаются того, что идёт не так: нет связи, код не считывается, лимит на заправку, прицеп с отдельной квотой. Это подтвердил и тест. Основной путь водители поняли, а трудности из их рассказов касались сбоев.</p>
+
+        </div>
+    </article>
+
+    <a class="next-case next--idp" href="idp.html">
+      <div class="wrap next-in">
+        <div>
+          <span class="mono">Следующий кейс</span>
+          <span class="next-title">Инфраструктура без заявок в DevOps</span>
+        </div>
+        <span class="cta-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </main>
+
+  <section class="contact" id="contacts">
+    <div class="wrap">
+      <h2 class="sr-only">Контакты</h2>
+      <div class="contact-list">
+        <a class="contact-row" href="https://t.me/sstarodumov"><span class="mono">Telegram</span><span class="big">@sstarodumov</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="contact-row"><span class="mono">Почта</span><a class="big" id="email" href="mailto:s.starodumov@gmail.com">s.starodumov<wbr>@gmail.com</a><button class="copy" type="button" data-copy="s.starodumov@gmail.com" aria-controls="email">Скопировать</button></div>
+        <a class="contact-row" href="https://www.linkedin.com/in/astarodumov/"><span class="mono">LinkedIn</span><span class="big">astarodumov</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="contact-row" href="https://disk.yandex.ru/i/7SIRNfnMH6PnsQ"><span class="mono">Резюме</span><span class="big">Скачать резюме · PDF</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+    <footer class="footer wrap mono">
+      <span>© 2026 Александр Стародумов</span>
+      <a href="#top">Наверх <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </footer>
+  </section>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>

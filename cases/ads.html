@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Рекламный кабинет: расчёт кампании вместо Excel · Александр Стародумов</title>
+  <meta name="description" content="Кейс: расчёт instore-кампании в рекламном кабинете розничной сети. Быстрый расчёт с прогнозом, детальная настройка и несколько версий расчёта вместо Excel.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Рекламный кабинет: расчёт кампании вместо Excel">
+  <meta property="og:description" content="Кейс продуктового дизайнера: расчёт instore-кампании занимает 10–15 минут вместо часов в Excel.">
+  <meta property="og:image" content="https://astarodumov.github.io/assets/img/ads/cover.webp">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body id="top" class="case-page">
+  <header class="site-header" data-header>
+    <div class="wrap header-in">
+      <a class="brand" href="../index.html"><span class="brand-mark">АС</span><span class="brand-name">Александр Стародумов</span></a>
+      <span class="header-section mono" data-current-section aria-hidden="true"></span>
+      <nav class="nav">
+        <a href="../index.html#work">Кейсы</a>
+        <a href="../index.html#approach">Подход</a>
+        <a class="btn btn-ink btn-sm" href="#contacts">Связаться</a>
+      </nav>
+    </div>
+    <div class="progress" data-progress></div>
+  </header>
+
+  <main>
+    <section class="case-hero case-hero--ads">
+      <div class="wrap">
+        <a class="back mono" href="../index.html#work"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Все кейсы</a>
+        <div class="case-tags mono"><span>Рекламный кабинет</span><span>Instore-реклама</span><span>B2B</span><span>2024</span></div>
+        <h1 class="case-title">Рекламный кабинет: расчёт кампании вместо Excel</h1>
+        <p class="case-lead">Instore-реклама — это ролики на кассах самообслуживания, экранах и радио в магазинах. Менеджеры считали такие кампании в Excel, и любое изменение бюджета или географии означало новый пересчёт. Я спроектировал расчёт в рекламном кабинете: быстрый расчёт с прогнозом, детальную настройку и несколько версий расчёта в одной кампании. Следующий этап, загрузку рекламных материалов, показываю <a href="ads-upload.html">во второй части</a>.</p>
+        <figure class="case-cover">
+          <img fetchpriority="high" src="../assets/img/ads/cover.webp" alt="Экран расчёта рекламной кампании: рекламодатель, бренд, вкладки расчётов, период, география и прогноз" width="1800" height="1022">
+          <figcaption>Расчёт рекламной кампании. Бренды и цифры на макетах условные</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="summary wrap">
+      <div class="result">
+        <p class="eyebrow mono">Результат</p>
+        <div class="result-metrics">
+          <div class="metric"><div class="metric-line"><span class="from">Часы</span><svg class="i" viewBox="0 0 24 24" aria-label="стало"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">10–⁠15 минут</span></div><span class="metric-label mono">время расчёта по оценке менеджеров, в зависимости от детализации</span></div>
+        </div>
+        <p class="result-note">Расчёт в Excel и согласования по почте занимали часы и дни. В кабинете расчёт занимает 10–⁠15 минут в зависимости от детализации, а менеджеры благодарили за то, что работа стала проще.</p>
+      </div>
+      <dl class="meta mono-dt">
+            <div><dt>Роль</dt><dd>Продуктовый дизайнер</dd></div>
+            <div><dt>Сроки</dt><dd>5 недель на исследование, дизайн и компоненты дизайн-системы, 2024</dd></div>
+            <div><dt>Статус</dt><dd>Реализовано, в проде</dd></div>
+            <div><dt>Команда</dt><dd>Продакт-менеджер, аналитики, разработчики, тестировщики</dd></div>
+            <div><dt>Что делал</dt><dd>Интервью, анализ конкурентов, два концепта, юзабилити-тесты, проектирование интерфейса, библиотека компонентов на основе библиотеки предыдущего продукта</dd></div>
+          </dl>
+    </section>
+
+    <article class="case-body wrap">
+      <div class="prose">
+
+        <h2 id="s1" class="reveal">Каждое изменение возвращало менеджера в таблицу</h2>
+        <p>Рынок instore-рекламы быстро растёт, и конкуренты начали разрабатывать собственные кабинеты. А внутри всё считалось вручную:</p>
+        <ul>
+          <li>менеджеры тратили часы на пересчёты и согласования, актуальную версию калькулятора приходилось запрашивать, а ошибки в расчётах замедляли работу с клиентом;</li>
+          <li>у клиента не было единого места, где видны все его кампании;</li>
+          <li>статистику собирали долго, а клиенты хотели видеть её как можно быстрее.</li>
+        </ul>
+        <p>Кейс про первые две проблемы, статистика — следующий этап кабинета.</p>
+        <p>Первыми пользователями должны были стать крупные рекламные агентства и собственные менеджеры, позже прямые рекламодатели и средний бизнес. Почти все они уже работают в Яндекс Директе, VK Рекламе и Ozon, поэтому кабинет опирается на привычные им паттерны.</p>
+        <p>Начать с собственных менеджеров предложил продакт-менеджер: основные потребности у них те же, что у агентств, но так можно быстрее проработать сценарии и проверить скорость и качество расчётов, прежде чем пускать в продукт внешних пользователей.</p>
+
+        <h2 id="s2" class="reveal">Каждая находка интервью стала решением в интерфейсе</h2>
+        <p>Я провёл пять интервью с пользователями и экспертами, чтобы понять контекст, найти боли и вместе с продуктовой командой расставить приоритеты. Отдельно разобрал кабинеты онлайн-рекламы (VK Реклама, Яндекс Директ, Ozon, Wildberries, Facebook Ads Manager) и наружной рекламы. Готовых кабинетов у прямых конкурентов на тот момент ещё не было.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Что выяснили</th><th>Решение</th></tr></thead>
+            <tbody>
+              <tr><td>Географию задают тремя способами: города-миллионники, список магазинов от поставщика по SAP-кодам, адреса «точек интереса», вокруг которых нужно подобрать магазины</td><td>Три способа выбора географии в одной форме: города и регионы, список магазинов, адреса и радиусы</td></tr>
+              <tr><td>Менеджеры готовят несколько версий расчёта с разными параметрами и согласуют их с клиентом</td><td>Версии расчёта как вкладки браузера</td></tr>
+              <tr><td>Рекламодатели хотят видеть прогноз, подтверждённый исследованиями</td><td>Прогноз охвата, OTS, частоты контакта и стоимости виден сразу, у показателей есть подсказки. Логика прогноза перенесена из Excel-калькулятора менеджеров</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="s3" class="reveal">Быстро посчитать, затем уточнить</h2>
+        <p>Я предложил два концепта страницы расчёта. В первом всё на одной странице: версии расчёта во вкладках, прогноз справа. Во втором кампания собирается из блоков инвентаря в боковой панели, а прогноз виден в строке сверху. После показа пользователям выбрали первый: он проще, гибче и оставляет место для развития интерфейса.</p>
+        <figure class="wide reveal">
+          <div class="canvas concepts">
+            <div class="concept"><img src="../assets/img/ads/concept-1.webp" alt="Концепт 1: форма расчёта, версии во вкладках, прогноз в колонке справа" width="800" height="815" loading="lazy"><span class="concept-cap">Концепт 1: версии во вкладках, прогноз справа</span></div>
+            <div class="concept"><img src="../assets/img/ads/concept-2.webp" alt="Концепт 2: блоки инвентаря в боковой панели, прогноз строкой над формой" width="800" height="665" loading="lazy"><span class="concept-cap">Концепт 2: блоки инвентаря в боковой панели, прогноз строкой сверху</span></div>
+          </div>
+          <figcaption>Концепты страницы расчёта</figcaption>
+        </figure>
+
+        <h3>1. Версии расчёта как вкладки браузера</h3>
+        <p>Менеджеру нужно сравнить несколько вариантов кампании и показать их клиенту. Вкладки — простой и знакомый шаблон: можно завести до 10 версий расчёта и переключаться между ними, не теряя ни одной.</p>
+
+        <h3>2. Быстрый расчёт отдельно от детальной настройки</h3>
+        <p>Менеджеру нужно быстро прикинуть разные варианты географии и форматов, но иногда и подкрутить параметры в конкретном городе. Я разделил расчёт на два слоя. В быстром задаются период, бюджет, география, торговые сети и форматы, и прогноз виден сразу. В детальной настройке меняются частота выходов, доля магазинов в регионах и длина ролика для каждого формата.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/calc-regions.webp" alt="Быстрый расчёт по городам и регионам с прогнозом справа" width="1800" height="1485" loading="lazy"></div>
+          <figcaption>Быстрый расчёт: параметры слева, прогноз справа</figcaption>
+        </figure>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/detail.webp" alt="Таблица детальной настройки: частота выходов, магазины и стоимость по регионам" width="1800" height="962" loading="lazy"></div>
+          <figcaption>Детальная настройка по регионам и форматам</figcaption>
+        </figure>
+
+        <h3>3. Расчёт по списку магазинов</h3>
+        <p>Поставщики часто приходят со своим списком магазинов. Его можно вставить списком SAP-кодов, а кабинет сразу покажет, какие магазины не нашлись или не подходят под выбранный формат.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/calc-sap.webp" alt="Расчёт по списку SAP-кодов с сообщениями об импортированных и не найденных магазинах" width="1800" height="1439" loading="lazy"></div>
+          <figcaption>Импорт списка магазинов с проверкой</figcaption>
+        </figure>
+
+        <h2 id="s4" class="reveal">После теста убрали лишние настройки</h2>
+        <p>Я собрал интерактивный прототип расчёта и детальной настройки, и мы провели 5 тестов с элементами интервью. Задания выполнили все участники, но тест показал, где интерфейс сложнее, чем нужно.</p>
+        <div class="pairs">
+          <div class="pairs-row pairs-head" aria-hidden="true"><span>На тесте</span><span></span><span>Что изменили</span></div>
+          <div class="pairs-row"><span class="was">Потребность задавать период для каждого города не подтвердилась</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Убрали настройку периода по городам</span></div>
+          <div class="pairs-row"><span class="was">Торговая сеть и формат настраивались отдельно</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Сгруппировали их и добавили для группы частоту и длину ролика</span></div>
+          <div class="pairs-row"><span class="was">Крестик на вкладке легко нажать случайно и потерять расчёт</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="now">Отдельная кнопка удаления, когда расчётов больше одного</span></div>
+        </div>
+        <p>Одно упрощение было не про поведение участников, а про сложность реализации. Удаление городов и регионов из расчёта отложили: оно давало много пограничных случаев, а исключить город можно и так, поставив ему 0% магазинов.</p>
+        <p>Вместе с аналитиком мы проработали больше 30 сценариев, включая пограничные случаи и ошибки.</p>
+
+        <h2 id="s5" class="reveal">Расчёт и все кампании в одном месте</h2>
+        <p>Кроме расчёта, для первой версии я подготовил статусы кампании, список кампаний с поиском и фильтрами, профили пользователя и организации.</p>
+        <figure class="wide reveal">
+          <div class="canvas"><img src="../assets/img/ads/campaigns.webp" alt="Список рекламных кампаний со статусами, клиентами, стоимостью и форматами" width="1800" height="1050" loading="lazy"></div>
+          <figcaption>Список кампаний со статусами и фильтрами</figcaption>
+        </figure>
+        <figure class="wide reveal">
+          <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/AUwnujPKyjM?rel=0" title="Создание рекламной кампании в кабинете" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <figcaption><a href="https://youtu.be/AUwnujPKyjM">Видео: создание рекламной кампании в кабинете</a></figcaption>
+        </figure>
+
+        <h2 id="s6" class="reveal">Выводы</h2>
+        <p><b>Тест сделал интерфейс проще.</b> Самые полезные изменения после теста — то, что мы убрали: настройку периода по городам и закрытие вкладки крестиком.</p>
+        <p><b>Расчёт стал основой кабинета.</b> Следующим шагом в тот же кабинет переехала загрузка рекламных материалов, и запуск кампании целиком прошёл внутри продукта.</p>
+        <p><b>Что сделал бы иначе.</b> Предложил бы разработчикам взять shadcn/ui и не тратил бы время на собственную библиотеку компонентов.</p>
+
+        </div>
+    </article>
+
+    <a class="next-case next--ads" href="ads-upload.html">
+      <div class="wrap next-in">
+        <div>
+          <span class="mono">Продолжение кейса</span>
+          <span class="next-title">Загрузка рекламных материалов</span>
+        </div>
+        <span class="cta-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </main>
+
+  <section class="contact" id="contacts">
+    <div class="wrap">
+      <h2 class="sr-only">Контакты</h2>
+      <div class="contact-list">
+        <a class="contact-row" href="https://t.me/sstarodumov"><span class="mono">Telegram</span><span class="big">@sstarodumov</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="contact-row"><span class="mono">Почта</span><a class="big" id="email" href="mailto:s.starodumov@gmail.com">s.starodumov<wbr>@gmail.com</a><button class="copy" type="button" data-copy="s.starodumov@gmail.com" aria-controls="email">Скопировать</button></div>
+        <a class="contact-row" href="https://www.linkedin.com/in/astarodumov/"><span class="mono">LinkedIn</span><span class="big">astarodumov</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="contact-row" href="https://disk.yandex.ru/i/7SIRNfnMH6PnsQ"><span class="mono">Резюме</span><span class="big">Скачать резюме · PDF</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+    <footer class="footer wrap mono">
+      <span>© 2026 Александр Стародумов</span>
+      <a href="#top">Наверх <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </footer>
+  </section>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>
